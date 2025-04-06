@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Noto Serif Bengali', serif;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+  padding: 20px;
+}
+
+.front-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+}
+
+.front-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.countdown {
+  font-size: 24px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.credits {
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .front-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .countdown {
+    font-size: 20px;
+  }
+
+  .credits {
+    font-size: 16px;
+  }
+}
